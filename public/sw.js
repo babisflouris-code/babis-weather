@@ -1,5 +1,5 @@
-const STATIC_CACHE = 'kairos-static-v1';
-const SHELL_ASSETS = ['/', '/manifest.webmanifest', '/icon.svg'];
+const STATIC_CACHE = 'babis-weather-static-v2';
+const SHELL_ASSETS = ['/', '/manifest.webmanifest?v=2', '/icon.svg?v=2'];
 
 self.addEventListener('install', (event) => {
   event.waitUntil(
@@ -27,6 +27,15 @@ self.addEventListener('fetch', (event) => {
   }
 
   const { request } = event;
+  if (
+    request.url.includes('/manifest.webmanifest') ||
+    request.url.includes('/icon.svg') ||
+    request.url.includes('/favicon.svg')
+  ) {
+    event.respondWith(fetch(request).catch(() => caches.match(request)));
+    return;
+  }
+
   if (
     request.url.includes('/v1/forecast') ||
     request.url.includes('/v1/search') ||
