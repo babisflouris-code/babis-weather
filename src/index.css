@@ -1,0 +1,29 @@
+:root {
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  line-height: 1.45;
+  color: #111827;
+  background: #f8fafc;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f8fafc;
+  color: #111827;
+  transition: background-color 220ms ease, color 220ms ease;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.theme-dark body {
+  background: #020617;
+  color: #e2e8f0;
+}
