@@ -1,7 +1,7 @@
 {
-  "name": "Kairos Weather",
-  "short_name": "Kairos",
-  "description": "Πρόγνωση καιρού με Open-Meteo",
+  "name": "Babis_weather",
+  "short_name": "Babis",
+  "description": "Babis_weather - Πρόγνωση καιρού με Open-Meteo",
   "lang": "el",
   "start_url": "/",
   "display": "standalone",

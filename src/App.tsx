@@ -530,7 +530,7 @@ function App() {
   return (
     <main className="app">
       <header>
-        <h1>Kairos Weather</h1>
+        <h1>Babis_weather</h1>
         <p>Γρήγορη πρόγνωση με Open-Meteo χωρίς server</p>
       </header>
 
