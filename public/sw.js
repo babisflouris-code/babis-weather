@@ -1,5 +1,11 @@
-const STATIC_CACHE = 'babis-weather-static-v2';
-const SHELL_ASSETS = ['/', '/manifest.webmanifest?v=2', '/icon.svg?v=2'];
+const STATIC_CACHE = 'babis-weather-static-v3';
+const SHELL_ASSETS = [
+  '/',
+  '/manifest.webmanifest?v=3',
+  '/icon-192.png?v=3',
+  '/icon-512.png?v=3',
+  '/apple-touch-icon.png?v=3',
+];
 
 self.addEventListener('install', (event) => {
   event.waitUntil(
@@ -30,6 +36,9 @@ self.addEventListener('fetch', (event) => {
   if (
     request.url.includes('/manifest.webmanifest') ||
     request.url.includes('/icon.svg') ||
+    request.url.includes('/icon-192.png') ||
+    request.url.includes('/icon-512.png') ||
+    request.url.includes('/apple-touch-icon.png') ||
     request.url.includes('/favicon.svg')
   ) {
     event.respondWith(fetch(request).catch(() => caches.match(request)));
